@@ -2,8 +2,8 @@ pandoc: 3.1.11
 pkgdown: 2.0.9
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-06-19T21:06Z
+last_built: 2024-06-19T21:26Z
 urls:
-  reference: https://averissimo.github.io/shiny.telemetry/v0.1.0/reference
-  article: https://averissimo.github.io/shiny.telemetry/v0.1.0/articles
+  reference: https://appsilon.github.io/shiny.telemetry/v0.1.0/reference
+  article: https://appsilon.github.io/shiny.telemetry/v0.1.0/articles
 
