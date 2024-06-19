@@ -1793,18 +1793,18 @@
         "VignetteBuilder": "knitr",
         "Author": "André Veríssimo [aut, cre],\n  Kamil Żyła [aut],\n  Krystian Igras [aut],\n  Recle Vibal [aut],\n  Arun Kodati [aut],\n  Wahaduzzaman Khan [aut],\n  Appsilon Sp. z o.o. [cph]",
         "Maintainer": "André Veríssimo <opensource+andre@appsilon.com>",
-        "Built": "R 4.4.1; ; 2024-06-19 20:02:20 UTC; unix",
+        "Built": "R 4.4.1; ; 2024-06-19 20:08:02 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteUsername": "appsilon",
         "RemoteRepo": "shiny.telemetry",
-        "RemoteRef": "e0bc24f58c0963aa30aced7832485ace8ddea751",
-        "RemoteSha": "e0bc24f58c0963aa30aced7832485ace8ddea751",
+        "RemoteRef": "3dcd7f7afebe3b43b978a451a88b431a82a55cb6",
+        "RemoteSha": "3dcd7f7afebe3b43b978a451a88b431a82a55cb6",
         "GithubHost": "api.github.com",
         "GithubRepo": "shiny.telemetry",
         "GithubUsername": "appsilon",
-        "GithubRef": "e0bc24f58c0963aa30aced7832485ace8ddea751",
-        "GithubSHA1": "e0bc24f58c0963aa30aced7832485ace8ddea751"
+        "GithubRef": "3dcd7f7afebe3b43b978a451a88b431a82a55cb6",
+        "GithubSHA1": "3dcd7f7afebe3b43b978a451a88b431a82a55cb6"
       }
     },
     "sodium": {
@@ -2285,7 +2285,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "558ca90f9729249c9b23ef6e52df9d26"
+      "checksum": "49dac0793d725b9b56b436ea30c0028a"
     },
     "api/handlers/insert.R": {
       "checksum": "eadd36b72d6dd25ba331b462855e603a"
@@ -2318,7 +2318,7 @@
       "checksum": "5aa33f0354380519046a4a6cc7aaf05c"
     },
     "renv.lock": {
-      "checksum": "c96566a2373afd0137514f1167386b3c"
+      "checksum": "6726342bf25dd73716be6467af5f5f4a"
     }
   },
   "users": null
