@@ -40,7 +40,19 @@ API for read/write operations"><!-- mathjax --><script src="https://cdnjs.cloudf
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown--how-to-guides">
+    <span class="fa fa-book-reader"></span>
+     
+    How-to Guides
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdown--how-to-guides">
+    <a class="dropdown-item" href="../articles/rhino.html">Using `shiny.telemetry` with Rhino</a>
+    <a class="dropdown-item" href="../articles/tracking-specific-input-id.html">Tracking Specific Inputs</a>
+    <a class="dropdown-item" href="../articles/databases.html">Telemetry with External Databases</a>
+  </div>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">
     <span class="fa fa-file-code-o"></span>
      
@@ -159,17 +171,17 @@ API for read/write operations</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 8</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   time                app_name session  type     id    value date       username</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2024-06-19 <span style="color: #949494;">21:35:02</span> example  session1 test_ev… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    2024-06-19 <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2024-06-19 <span style="color: #949494;">21:35:02</span> example  s1       input    id1   <span style="color: #BB0000;">NA</span>    2024-06-19 <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 2024-06-19 <span style="color: #949494;">21:35:02</span> example  s1       input    id2   32    2024-06-19 <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> 2024-06-16 <span style="color: #949494;">00:00:00</span> example  session1 test_ev… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    2024-06-16 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2024-06-20 <span style="color: #949494;">07:47:32</span> example  session1 test_ev… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    2024-06-20 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2024-06-20 <span style="color: #949494;">07:47:32</span> example  s1       input    id1   <span style="color: #BB0000;">NA</span>    2024-06-20 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 2024-06-20 <span style="color: #949494;">07:47:32</span> example  s1       input    id2   32    2024-06-20 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> 2024-06-17 <span style="color: #949494;">00:00:00</span> example  session1 test_ev… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    2024-06-17 <span style="color: #BB0000;">NA</span>      </span>
 <span class="r-in"><span><span class="va">data_storage</span><span class="op">$</span><span class="fu">read_event_data</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 8</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   time                app_name session  type     id    value date       username</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2024-06-19 <span style="color: #949494;">21:35:02</span> example  session1 test_ev… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    2024-06-19 <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2024-06-19 <span style="color: #949494;">21:35:02</span> example  s1       input    id1   <span style="color: #BB0000;">NA</span>    2024-06-19 <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 2024-06-19 <span style="color: #949494;">21:35:02</span> example  s1       input    id2   32    2024-06-19 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2024-06-20 <span style="color: #949494;">07:47:32</span> example  session1 test_ev… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    2024-06-20 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2024-06-20 <span style="color: #949494;">07:47:32</span> example  s1       input    id1   <span style="color: #BB0000;">NA</span>    2024-06-20 <span style="color: #BB0000;">NA</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 2024-06-20 <span style="color: #949494;">07:47:32</span> example  s1       input    id2   32    2024-06-20 <span style="color: #BB0000;">NA</span>      </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">db_path</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>

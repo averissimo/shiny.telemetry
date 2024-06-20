@@ -38,7 +38,19 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown--how-to-guides">
+    <span class="fa fa-book-reader"></span>
+     
+    How-to Guides
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdown--how-to-guides">
+    <a class="dropdown-item" href="../articles/rhino.html">Using `shiny.telemetry` with Rhino</a>
+    <a class="dropdown-item" href="../articles/tracking-specific-input-id.html">Tracking Specific Inputs</a>
+    <a class="dropdown-item" href="../articles/databases.html">Telemetry with External Databases</a>
+  </div>
+</li>
+<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">
     <span class="fa fa-file-code-o"></span>
      
@@ -96,6 +108,7 @@
 <ul><li>Updates documentation to use markdown format (<a href="https://github.com/Appsilon/shiny.telemetry/issues/153" class="external-link">#153</a>).</li>
 <li>Improves SQL injection safeguards via <code><a href="https://glue.tidyverse.org/reference/glue_sql.html" class="external-link">glue::glue_sql</a></code> to generated SQL queries (<a href="https://github.com/Appsilon/shiny.telemetry/issues/34" class="external-link">#34</a>).</li>
 <li>Show proper error message when no telemetry data is available (<a href="https://github.com/Appsilon/shiny.telemetry/issues/177" class="external-link">#177</a>).</li>
+<li>Adds how-to guides to site (<a href="https://github.com/Appsilon/shiny.telemetry/issues/179" class="external-link">#179</a> and <a href="https://github.com/Appsilon/shiny.telemetry/issues/180" class="external-link">#180</a>)</li>
 </ul></div>
 <div class="section level4">
 <h4 id="bug-fixes-development-version">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h4>
