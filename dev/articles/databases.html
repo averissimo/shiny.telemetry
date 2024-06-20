@@ -146,24 +146,26 @@ data.</p>
 <li>MongoDB</li>
 <li>SQLite</li>
 </ul>
-<p>In our example applications we include
-<code>docker-container.yml</code> for each that will allow to quickly
-run a database server locally with the necessary configuration. It
-requires Docker or Podman installed to run the containers.</p>
-<p>The examples folder also has a Shiny application that uses each of
-the backends.</p>
-<p>See <code>inst/examples/</code> folder or the <a href="https://github.com/Appsilon/shiny.telemetry/tree/main/inst/examples" class="external-link">GitHub
-link</a> for more details.</p>
+<p>We provide example applications for each database backend with
+necessary R code to run both the application and the analytics server.
+This is further supported with a <code>docker-container.yml</code> to
+help users quickly setup and test the apps locally. It requires Docker
+(<code>docker compose up -d</code>) or Podman
+(<code>podman-compose up -d</code>) installed to run the containers.</p>
+<p>These applications are available under the
+<code>inst/examples/</code> folder or via the <a href="https://github.com/Appsilon/shiny.telemetry/tree/main/inst/examples" class="external-link">GitHub
+link</a>.</p>
 <div class="section level2 tabset">
 <h2 class="tabset" id="create-a-data-storage-backend">Create a data storage backend<a class="anchor" aria-label="anchor" href="#create-a-data-storage-backend"></a>
 </h2>
 <p>Each data storage backend will create the necessary tables <em>(or
-Collection in the case of MongoDB)</em> with the respective schema when
-needed.</p>
-<p>The arguments to create an data storage instance vary, however, the
-read and write operations have the same API. When migrating between
-backends, the only changes needed are in the initialization of the data
-storage object.</p>
+“Collection” in the case of MongoDB)</em> with the respective schema
+when needed.</p>
+<p>The arguments to create an data storage instance vary, as different
+databases require their own options. However, once the data storage
+object is created, the read and write operations have the same API.</p>
+<p>Below you find chunks to create a data storage object for each
+supported database.</p>
 
 
 
@@ -179,8 +181,6 @@ storage object.</p>
 <div class="tab-content">
 <div class="active  tab-pane" id="postgresql" role="tabpanel" aria-labelledby="postgresql-tab">
 
-<p>The PostgreSQL data storage will create a database in a PostgreSQL
-server.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">data_storage</span> <span class="op">&lt;-</span> <span class="va"><a href="../reference/DataStoragePostgreSQL.html">DataStoragePostgreSQL</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span></span>
 <span>  user <span class="op">=</span> <span class="st">"postgres"</span>,</span>
@@ -190,6 +190,10 @@ server.</p>
 <span>  dbname <span class="op">=</span> <span class="st">"shiny_telemetry"</span>,</span>
 <span>  driver <span class="op">=</span> <span class="st">"RPostgreSQL"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
+<p><em>notes</em>: - The <code>dbname</code> database needs to be
+created before running the application with
+<a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a>. - The <code>driver</code> allows users
+to use either <code>RPostgreSQL</code> or <code>RPostgres</code>.</p>
 </div>
 <div class="tab-pane" id="mariadb-mysql" role="tabpanel" aria-labelledby="mariadb-mysql-tab">
 
@@ -201,8 +205,9 @@ server.</p>
 <span>  port <span class="op">=</span> <span class="fl">3306</span>,</span>
 <span>  dbname <span class="op">=</span> <span class="st">"shiny_telemetry"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><em>note</em>: The <code>dbname</code> data base needs to be created
-before running the application with <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a>.</p>
+<p><em>notes</em>: - The <code>dbname</code> database needs to be
+created before running the application with
+<a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a>.</p>
 </div>
 <div class="tab-pane" id="ms-sql-server" role="tabpanel" aria-labelledby="ms-sql-server-tab">
 
@@ -216,7 +221,7 @@ before running the application with <a href="https://appsilon.github.io/shiny.te
 <span>  driver <span class="op">=</span> <span class="st">"ODBC Driver 17 for SQL Server"</span>,</span>
 <span>  trust_server_certificate <span class="op">=</span> <span class="st">"NO"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><em>note</em>: The <code>dbname</code> data base needs to be created
+<p><em>note</em>: The <code>dbname</code> database needs to be created
 before running the application with <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a>.</p>
 </div>
 <div class="tab-pane" id="mongodb" role="tabpanel" aria-labelledby="mongodb-tab">
@@ -248,6 +253,23 @@ file that the Shiny application can write to.</p>
 <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a> is consistent across all backends, which
 allows the developer to implement and test the package with the most
 convenient backend and then easily migrate to an external database.</p>
+<p>Therefore, once it is initialized it can be used to create the
+<code>Telemetry</code> object and start a session.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Same example as README with custom database backend.</span></span>
+<span><span class="va">telemetry</span> <span class="op">&lt;-</span> <span class="va"><a href="../reference/Telemetry.html">Telemetry</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span>data_storage <span class="op">=</span> <span class="va">data_storage</span><span class="op">)</span> <span class="co"># 1. Initialize telemetry with object created above</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html" class="external-link">shinyApp</a></span><span class="op">(</span></span>
+<span>  ui <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidPage</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="../reference/use_telemetry.html">use_telemetry</a></span><span class="op">(</span><span class="op">)</span>, <span class="co"># 2. Add necessary javascript to Shiny</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html" class="external-link">numericInput</a></span><span class="op">(</span><span class="st">"n"</span>, <span class="st">"n"</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html" class="external-link">plotOutput</a></span><span class="op">(</span><span class="st">'plot'</span><span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  server <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">input</span>, <span class="va">output</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">telemetry</span><span class="op">$</span><span class="fu">start_session</span><span class="op">(</span><span class="op">)</span> <span class="co"># 3. Minimal setup to track events</span></span>
+<span>    <span class="va">output</span><span class="op">$</span><span class="va">plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/renderPlot.html" class="external-link">renderPlot</a></span><span class="op">(</span><span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="va">input</span><span class="op">$</span><span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
