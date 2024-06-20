@@ -61,9 +61,10 @@ the supported providers (see DataStorage)."><!-- mathjax --><script src="https:/
     How-to Guides
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdown--how-to-guides">
-    <a class="dropdown-item" href="../articles/rhino.html">Using `shiny.telemetry` with Rhino</a>
-    <a class="dropdown-item" href="../articles/tracking-specific-input-id.html">Tracking Specific Inputs</a>
-    <a class="dropdown-item" href="../articles/databases.html">Telemetry with External Databases</a>
+    <a class="dropdown-item" href="../articles/rhino.html">Setup shiny.telemetry in a Rhino application</a>
+    <a class="dropdown-item" href="../articles/tracking-specific-input-id.html">Track a Subset of Inputs to Improve Performance</a>
+    <h6 class="dropdown-header" data-toc-skip>Data Storage backends</h6>
+    <a class="dropdown-item" href="../articles/databases.html">Use External Databases with shiny.telemetry</a>
   </div>
 </li>
 <li class="active nav-item">
@@ -687,11 +688,11 @@ Shiny session.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 5 × 9</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   app_name   type  session username id    value custom_field time               </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> (dashboar… login eeb6ce… anon_us… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:38:19</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> (dashboar… click eeb6ce… <span style="color: #BB0000;">NA</span>       a_bu… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:38:19</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> (dashboar… a_bu… eeb6ce… <span style="color: #BB0000;">NA</span>       <span style="color: #BB0000;">NA</span>    2023  <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:38:19</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> (dashboar… a_bu… eeb6ce… <span style="color: #BB0000;">NA</span>       <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    23           2024-06-20 <span style="color: #949494;">08:38:19</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> (dashboar… login eeb6ce… ben      <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:38:19</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> (dashboar… login 8d4fc1… anon_us… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:46:27</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> (dashboar… click 8d4fc1… <span style="color: #BB0000;">NA</span>       a_bu… <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:46:27</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> (dashboar… a_bu… 8d4fc1… <span style="color: #BB0000;">NA</span>       <span style="color: #BB0000;">NA</span>    2023  <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:46:27</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> (dashboar… a_bu… 8d4fc1… <span style="color: #BB0000;">NA</span>       <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    23           2024-06-20 <span style="color: #949494;">08:46:27</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> (dashboar… login 8d4fc1… ben      <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #949494;">08:46:27</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: date &lt;date&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">log_file_path</span><span class="op">)</span></span></span>
@@ -712,8 +713,8 @@ Shiny session.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 9</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   time                app_name session type  value custom_field date       id   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2024-06-20 <span style="color: #949494;">08:38:19</span> (dashbo… eeb6ce… a_bu… 2023  <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2024-06-20 <span style="color: #949494;">08:38:19</span> (dashbo… eeb6ce… a_bu… <span style="color: #BB0000;">NA</span>    23           2024-06-20 <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2024-06-20 <span style="color: #949494;">08:46:27</span> (dashbo… 8d4fc1… a_bu… 2023  <span style="color: #BB0000;">NA</span>           2024-06-20 <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2024-06-20 <span style="color: #949494;">08:46:27</span> (dashbo… 8d4fc1… a_bu… <span style="color: #BB0000;">NA</span>    23           2024-06-20 <span style="color: #BB0000;">NA</span>   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: username &lt;chr&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">db_path</span><span class="op">)</span></span></span>
