@@ -144,17 +144,17 @@ robust.</p>
 <p>Using <code>{shiny.telemtry}</code> with <a href="https://appsilon.github.io/rhino/" class="external-link">rhino</a> is very
 simple and it requires only a few lines of code just as any other
 app.</p>
+<p>After initializing <a href="https://appsilon.github.io/rhino/" class="external-link">rhino</a> with
+<code>rhino::init()</code> or using an existing <a href="https://appsilon.github.io/rhino/" class="external-link">rhino</a>
+code base, you can start using <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a> to track
+events in your application by:</p>
 <ol style="list-style-type: decimal">
 <li>Import functions from <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a> using
 <a href="https://klmr.me/box/" class="external-link">box</a>;</li>
-<li>Add necessary Javascript to UI definition;</li>
+<li>Add Javascript code to UI definition;</li>
 <li>Create a <code>Telemetry</code> object;</li>
-<li>Start telemetry session attached to a server function;</li>
+<li>Start telemetry session attached to a Shiny session.</li>
 </ol>
-<ul>
-<li>This will track all inputs for the server and all subsequent
-modules.</li>
-</ul>
 <div class="section level3">
 <h3 id="import-functions-from-shiny-telemetry">Import functions from <code>shiny.telemetry</code><a class="anchor" aria-label="anchor" href="#import-functions-from-shiny-telemetry"></a>
 </h3>
@@ -162,12 +162,18 @@ modules.</li>
 <a href="https://klmr.me/box/" class="external-link">box</a> to import functions from packages and internal
 modules. See the <a href="https://appsilon.github.io/rhino/" class="external-link">rhino</a> documentation on how to <a href="https://appsilon.github.io/rhino/articles/how-to/write-r-code.html" class="external-link">write
 R code</a> for more details.</p>
-<p>The minimal setup for <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a> needs to import:
-- Class for the chosen <code>DataStorage</code> backend
-(e.g. <code>DataStorageLogFile</code> for a text-based storage or
-<code>DataStorageMariaDB</code> for a MariaDB database); - Class for the
-Telemetry function that will track all the events; - Function to load
-the necessary Javascript code in the UI definition.</p>
+<p>The minimal setup for <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a> needs to
+import:</p>
+<ul>
+<li>Class for the chosen <code>DataStorage</code> backend
+(e.g. <code>DataStorageLogFile</code> for a text-based storage,
+<code>DataStorageMariaDB</code> for a MariaDB database, among
+others);</li>
+<li>Class for the Telemetry function that will track all the
+events;</li>
+<li>Function to load the necessary Javascript code in the UI
+definition.</li>
+</ul>
 <p>Any additional function that is being used, needs to be imported as
 well. This can be done by adding the following code to the top of
 <code>app/main.R</code> file on the package imports:</p>
@@ -197,7 +203,7 @@ Javascript code.</p>
 <span><span class="op">}</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="create-telemetry-object">Create Telemetry object<a class="anchor" aria-label="anchor" href="#create-telemetry-object"></a>
+<h3 id="create-telemetry-object">Create <code>Telemetry</code> object<a class="anchor" aria-label="anchor" href="#create-telemetry-object"></a>
 </h3>
 <p>The next step is to create a <code>Telemetry</code> object that will
 be used to track events in the app.</p>
