@@ -580,14 +580,7 @@
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
         "Date/Publication": "2022-09-29 16:20:24 UTC",
-        "Built": "R 4.4.0; ; 2024-04-25 19:43:16 UTC; unix",
-        "RemoteType": "standard",
-        "RemotePkgRef": "crayon",
-        "RemoteRef": "crayon",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "source",
-        "RemoteSha": "1.5.2"
+        "Built": "R 4.4.0; ; 2024-04-25 19:43:16 UTC; unix"
       }
     },
     "curl": {
@@ -1016,7 +1009,7 @@
     },
     "httr2": {
       "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "httr2",
         "Title": "Perform HTTP Requests and Process the Responses",
@@ -1575,7 +1568,7 @@
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "RSPM",
         "Date/Publication": "2023-08-10 08:20:07 UTC",
-        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-04-25 19:48:36 UTC; unix",
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-06-22 04:20:29 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "purrr",
         "RemoteRef": "purrr",
@@ -1776,35 +1769,34 @@
         "Type": "Package",
         "Package": "shiny.telemetry",
         "Title": "'Shiny' App Usage Telemetry",
-        "Version": "0.2.0.9014",
+        "Version": "0.3.0",
         "Authors@R": "c(\n    person(\"André\", \"Veríssimo\", , \"opensource+andre@appsilon.com\", role = c(\"aut\", \"cre\")),\n    person(\"Kamil\", \"Żyła\", , \"kamil@appsilon.com\", role = \"aut\"),\n    person(\"Krystian\", \"Igras\", , \"krystian8207@gmail.com\", role = \"aut\"),\n    person(\"Recle\", \"Vibal\", , \"recle.vibal@appsilon.com\", role = \"aut\"),\n    person(\"Arun\", \"Kodati\", , \"arun.kodati@appsilon.com\", role = \"aut\"),\n    person(\"Wahaduzzaman\", \"Khan\", , \"wahaduzzaman@appsilon.com\", role = \"aut\"),\n    person(\"Appsilon Sp. z o.o.\", , , \"opensource@appsilon.com\", role = \"cph\")\n  )",
         "Description": "Enables instrumentation of 'Shiny' apps for tracking user\n    session events such as input changes, browser type, and session\n    duration.  These events can be sent to any of the available storage\n    backends and analyzed using the included 'Shiny' app to gain insights\n    about app usage and adoption.",
         "License": "LGPL-3",
         "URL": "https://appsilon.github.io/shiny.telemetry/,\nhttps://github.com/Appsilon/shiny.telemetry",
         "BugReports": "https://github.com/Appsilon/shiny.telemetry/issues",
-        "Imports": "checkmate,\ndigest,\ndplyr (>= 1.1.0),\nglue,\nhttr2,\njsonlite,\nlogger,\nlubridate,\nodbc,\npurrr,\nR6,\nrlang,\nRSQLite,\nshiny,\ntidyr,\nhtmltools,\nstringr",
-        "Suggests": "box,\nconfig,\ncovr,\nDT,\nplotly,\nplumber,\nRColorBrewer,\nRMariaDB,\nRPostgreSQL,\nRPostgres,\nmongolite,\nscales,\nsemantic.dashboard (>= 0.1.1),\nshiny.semantic (>= 0.2.0),\nshinyjs,\ntestthat (>= 3.1.7),\ntimevis,\nwithr,\nknitr,\nrmarkdown",
+        "Imports": "checkmate,\ndigest,\ndplyr (>= 1.1.0),\nglue,\nhtmltools,\nhttr2,\njsonlite,\nlifecycle,\nlogger,\nlubridate,\nodbc,\npurrr,\nR6,\nrlang,\nRSQLite,\nshiny,\nstringr,\ntidyr",
+        "Suggests": "box,\nconfig,\nDT,\nmongolite,\nplotly,\nplumber,\nRColorBrewer,\nRMariaDB,\nRPostgres,\nRPostgreSQL,\nscales,\nsemantic.dashboard (>= 0.1.1),\nshiny.semantic (>= 0.2.0),\nshinyjs,\ntestthat (>= 3.1.7),\ntimevis,\nwithr",
         "Config/testthat/edition": "3",
         "Encoding": "UTF-8",
         "Language": "en-US",
         "LazyData": "true",
         "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.1",
-        "VignetteBuilder": "knitr",
         "Author": "André Veríssimo [aut, cre],\n  Kamil Żyła [aut],\n  Krystian Igras [aut],\n  Recle Vibal [aut],\n  Arun Kodati [aut],\n  Wahaduzzaman Khan [aut],\n  Appsilon Sp. z o.o. [cph]",
         "Maintainer": "André Veríssimo <opensource+andre@appsilon.com>",
-        "Built": "R 4.4.1; ; 2024-06-20 08:37:38 UTC; unix",
+        "Built": "R 4.4.1; ; 2024-07-17 09:28:44 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteUsername": "appsilon",
         "RemoteRepo": "shiny.telemetry",
-        "RemoteRef": "bd540f32f989796935a21c3d87f11afca83f2b2c",
-        "RemoteSha": "bd540f32f989796935a21c3d87f11afca83f2b2c",
+        "RemoteRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
+        "RemoteSha": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
         "GithubHost": "api.github.com",
         "GithubRepo": "shiny.telemetry",
         "GithubUsername": "appsilon",
-        "GithubRef": "bd540f32f989796935a21c3d87f11afca83f2b2c",
-        "GithubSHA1": "bd540f32f989796935a21c3d87f11afca83f2b2c"
+        "GithubRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
+        "GithubSHA1": "5335daae39118ef9040f542a17a99c3fb37aa3f8"
       }
     },
     "sodium": {
@@ -2285,7 +2277,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "080d612dd952e5c7ed4748ef40404fb5"
+      "checksum": "f7b0e4e2fc9fbc738c83223980a39a0e"
     },
     "api/handlers/insert.R": {
       "checksum": "eadd36b72d6dd25ba331b462855e603a"
@@ -2315,10 +2307,10 @@
       "checksum": "9d7b496a437a7ea4ffe91b25fc698960"
     },
     "README.md": {
-      "checksum": "5aa33f0354380519046a4a6cc7aaf05c"
+      "checksum": "069c831b460e79da195f09d85c5a3897"
     },
     "renv.lock": {
-      "checksum": "a8f3189947f2aea812c54c73e960d5a6"
+      "checksum": "573f726ef5520d98a2074dabe061933f"
     }
   },
   "users": null
