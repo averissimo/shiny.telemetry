@@ -34,7 +34,7 @@
     <a href="https://appsilon.github.io/shiny.telemetry/#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="https://appsilon.github.io/shiny.telemetry/index.html">shiny.telemetry</a>
 
@@ -48,7 +48,15 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item"><a class="nav-link" href="https://appsilon.github.io/shiny.telemetry/index.html"><span class="fa fa-home"></span> Start</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-how-to-guides" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span class="fa fa-book-reader"></span> How-to Guides</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-how-to-guides">
+<li><a class="dropdown-item" href="https://appsilon.github.io/shiny.telemetry/articles/rhino.html">Setup shiny.telemetry in a Rhino application</a></li>
+    <li><a class="dropdown-item" href="https://appsilon.github.io/shiny.telemetry/articles/tracking-specific-input-id.html">Track a Subset of Inputs to Improve Performance</a></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Data Storage backends</h6></li>
+    <li><a class="dropdown-item" href="https://appsilon.github.io/shiny.telemetry/articles/databases.html">Use External Databases with shiny.telemetry</a></li>
+  </ul>
+</li>
 <li class="nav-item"><a class="nav-link" href="https://appsilon.github.io/shiny.telemetry/reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
 <li class="nav-item"><a class="nav-link" href="https://appsilon.github.io/shiny.telemetry/news/index.html"><span class="fa fa-newspaper-o"></span> Changelog</a></li>
       </ul>
