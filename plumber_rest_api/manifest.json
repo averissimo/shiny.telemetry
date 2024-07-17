@@ -1009,7 +1009,7 @@
     },
     "httr2": {
       "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "httr2",
         "Title": "Perform HTTP Requests and Process the Responses",
@@ -1776,27 +1776,28 @@
         "URL": "https://appsilon.github.io/shiny.telemetry/,\nhttps://github.com/Appsilon/shiny.telemetry",
         "BugReports": "https://github.com/Appsilon/shiny.telemetry/issues",
         "Imports": "checkmate,\ndigest,\ndplyr (>= 1.1.0),\nglue,\nhtmltools,\nhttr2,\njsonlite,\nlifecycle,\nlogger,\nlubridate,\nodbc,\npurrr,\nR6,\nrlang,\nRSQLite,\nshiny,\nstringr,\ntidyr",
-        "Suggests": "box,\nconfig,\nDT,\nmongolite,\nplotly,\nplumber,\nRColorBrewer,\nRMariaDB,\nRPostgres,\nRPostgreSQL,\nscales,\nsemantic.dashboard (>= 0.1.1),\nshiny.semantic (>= 0.2.0),\nshinyjs,\ntestthat (>= 3.1.7),\ntimevis,\nwithr",
+        "Suggests": "box,\nconfig,\nDT,\nmongolite,\nplotly,\nplumber,\nRColorBrewer,\nRMariaDB,\nRPostgres,\nRPostgreSQL,\nscales,\nsemantic.dashboard (>= 0.1.1),\nshiny.semantic (>= 0.2.0),\nshinyjs,\ntestthat (>= 3.1.7),\ntimevis,\nwithr,\nknitr,\nrmarkdown",
         "Config/testthat/edition": "3",
         "Encoding": "UTF-8",
         "Language": "en-US",
         "LazyData": "true",
         "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.1",
+        "VignetteBuilder": "knitr",
         "Author": "André Veríssimo [aut, cre],\n  Kamil Żyła [aut],\n  Krystian Igras [aut],\n  Recle Vibal [aut],\n  Arun Kodati [aut],\n  Wahaduzzaman Khan [aut],\n  Appsilon Sp. z o.o. [cph]",
         "Maintainer": "André Veríssimo <opensource+andre@appsilon.com>",
-        "Built": "R 4.4.1; ; 2024-07-17 09:28:44 UTC; unix",
+        "Built": "R 4.4.1; ; 2024-07-17 13:17:30 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteUsername": "appsilon",
         "RemoteRepo": "shiny.telemetry",
-        "RemoteRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
-        "RemoteSha": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
+        "RemoteRef": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
+        "RemoteSha": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
         "GithubHost": "api.github.com",
         "GithubRepo": "shiny.telemetry",
         "GithubUsername": "appsilon",
-        "GithubRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
-        "GithubSHA1": "5335daae39118ef9040f542a17a99c3fb37aa3f8"
+        "GithubRef": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
+        "GithubSHA1": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4"
       }
     },
     "sodium": {
@@ -2277,7 +2278,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "f7b0e4e2fc9fbc738c83223980a39a0e"
+      "checksum": "6ac20051bf03d37472c688c2ea9cc563"
     },
     "api/handlers/insert.R": {
       "checksum": "eadd36b72d6dd25ba331b462855e603a"
@@ -2310,7 +2311,7 @@
       "checksum": "069c831b460e79da195f09d85c5a3897"
     },
     "renv.lock": {
-      "checksum": "573f726ef5520d98a2074dabe061933f"
+      "checksum": "3c87c3c98e9f19427e05e13ff04f40ff"
     }
   },
   "users": null

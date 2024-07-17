@@ -417,7 +417,7 @@
     },
     "httr2": {
       "Package": "httr2",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -434,7 +434,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "03d741c92fda96d98c3a3f22494e3b4a"
+      "Hash": "320c8fe23fcb25a6690ef7bdb6a3a705"
     },
     "jquerylib": {
       "Package": "jquerylib",
@@ -798,8 +798,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "appsilon",
       "RemoteRepo": "shiny.telemetry",
-      "RemoteRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
-      "RemoteSha": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
+      "RemoteRef": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
+      "RemoteSha": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
       "Requirements": [
         "R6",
         "RSQLite",
@@ -820,7 +820,7 @@
         "stringr",
         "tidyr"
       ],
-      "Hash": "b8faabeefb7655a1594046890c4311c0"
+      "Hash": "b6dcce21a2c3210b18d6625ca7f24e9a"
     },
     "sourcetools": {
       "Package": "sourcetools",

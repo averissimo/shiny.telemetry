@@ -1183,38 +1183,39 @@
     },
     "httr2": {
       "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "httr2",
         "Title": "Perform HTTP Requests and Process the Responses",
-        "Version": "1.0.1",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n    person(\"Maximilian\", \"Girlich\", role = \"ctb\")\n  )",
+        "Version": "1.0.2",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Maximilian\", \"Girlich\", role = \"ctb\")\n  )",
         "Description": "Tools for creating and modifying HTTP requests, then\n    performing them and processing the results. 'httr2' is a modern\n    re-imagining of 'httr' that uses a pipe-based interface and solves\n    more of the problems that API wrapping packages face.",
         "License": "MIT + file LICENSE",
         "URL": "https://httr2.r-lib.org, https://github.com/r-lib/httr2",
         "BugReports": "https://github.com/r-lib/httr2/issues",
-        "Depends": "R (>= 3.6)",
+        "Depends": "R (>= 4.0)",
         "Imports": "cli (>= 3.0.0), curl (>= 5.1.0), glue, lifecycle, magrittr,\nopenssl, R6, rappdirs, rlang (>= 1.1.0), vctrs (>= 0.6.3),\nwithr",
         "Suggests": "askpass, bench, clipr, covr, docopt, httpuv, jose, jsonlite,\nknitr, rmarkdown, testthat (>= 3.1.8), tibble, webfakes, xml2",
         "VignetteBuilder": "knitr",
         "Config/Needs/website": "tidyverse/tidytemplate",
         "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
         "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.1",
+        "RoxygenNote": "7.3.2",
         "NeedsCompilation": "no",
-        "Packaged": "2024-04-01 18:58:33 UTC; hadleywickham",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph, fnd],\n  Maximilian Girlich [ctb]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+        "Packaged": "2024-07-15 20:48:57 UTC; hadleywickham",
+        "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  Maximilian Girlich [ctb]",
+        "Maintainer": "Hadley Wickham <hadley@posit.co>",
         "Repository": "RSPM",
-        "Date/Publication": "2024-04-01 19:30:02 UTC",
-        "Built": "R 4.4.0; ; 2024-04-25 19:48:29 UTC; unix",
+        "Date/Publication": "2024-07-16 09:30:02 UTC",
+        "Built": "R 4.4.0; ; 2024-07-17 04:26:43 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "httr2",
         "RemoteRef": "httr2",
         "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
         "RemoteReposName": "CRAN",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "1.0.1"
+        "RemoteSha": "1.0.2"
       }
     },
     "jquerylib": {
@@ -2152,27 +2153,28 @@
         "URL": "https://appsilon.github.io/shiny.telemetry/,\nhttps://github.com/Appsilon/shiny.telemetry",
         "BugReports": "https://github.com/Appsilon/shiny.telemetry/issues",
         "Imports": "checkmate,\ndigest,\ndplyr (>= 1.1.0),\nglue,\nhtmltools,\nhttr2,\njsonlite,\nlifecycle,\nlogger,\nlubridate,\nodbc,\npurrr,\nR6,\nrlang,\nRSQLite,\nshiny,\nstringr,\ntidyr",
-        "Suggests": "box,\nconfig,\nDT,\nmongolite,\nplotly,\nplumber,\nRColorBrewer,\nRMariaDB,\nRPostgres,\nRPostgreSQL,\nscales,\nsemantic.dashboard (>= 0.1.1),\nshiny.semantic (>= 0.2.0),\nshinyjs,\ntestthat (>= 3.1.7),\ntimevis,\nwithr",
+        "Suggests": "box,\nconfig,\nDT,\nmongolite,\nplotly,\nplumber,\nRColorBrewer,\nRMariaDB,\nRPostgres,\nRPostgreSQL,\nscales,\nsemantic.dashboard (>= 0.1.1),\nshiny.semantic (>= 0.2.0),\nshinyjs,\ntestthat (>= 3.1.7),\ntimevis,\nwithr,\nknitr,\nrmarkdown",
         "Config/testthat/edition": "3",
         "Encoding": "UTF-8",
         "Language": "en-US",
         "LazyData": "true",
         "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.1",
+        "VignetteBuilder": "knitr",
         "Author": "André Veríssimo [aut, cre],\n  Kamil Żyła [aut],\n  Krystian Igras [aut],\n  Recle Vibal [aut],\n  Arun Kodati [aut],\n  Wahaduzzaman Khan [aut],\n  Appsilon Sp. z o.o. [cph]",
         "Maintainer": "André Veríssimo <opensource+andre@appsilon.com>",
-        "Built": "R 4.4.1; ; 2024-07-17 09:28:44 UTC; unix",
+        "Built": "R 4.4.1; ; 2024-07-17 13:17:30 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteUsername": "appsilon",
         "RemoteRepo": "shiny.telemetry",
-        "RemoteRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
-        "RemoteSha": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
+        "RemoteRef": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
+        "RemoteSha": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
         "GithubHost": "api.github.com",
         "GithubRepo": "shiny.telemetry",
         "GithubUsername": "appsilon",
-        "GithubRef": "5335daae39118ef9040f542a17a99c3fb37aa3f8",
-        "GithubSHA1": "5335daae39118ef9040f542a17a99c3fb37aa3f8"
+        "GithubRef": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4",
+        "GithubSHA1": "d5e3d8fa4260faf1c8b86baef84ea2d3b81843d4"
       }
     },
     "sourcetools": {
@@ -2704,7 +2706,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "8dd16dcb89d3fb0fdca2e89ff5cfd042"
+      "checksum": "3b0c849d5d8b0cd89fb356c0e4d134f8"
     },
     "app.R": {
       "checksum": "9f0eba0f09bda485101c886f593407a5"
@@ -2713,7 +2715,7 @@
       "checksum": "968f17d0f34fcffeef3e184e755b94ae"
     },
     "renv.lock": {
-      "checksum": "033638b9281b039e124a02bc07793f8c"
+      "checksum": "63f35e4d069999eeb3aa39f0c35016be"
     }
   },
   "users": null
