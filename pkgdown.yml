@@ -1,11 +1,8 @@
 pandoc: 3.1.11
 pkgdown: 2.1.0
 pkgdown_sha: ~
-articles:
-  databases: databases.html
-  rhino: rhino.html
-  tracking-specific-input-id: tracking-specific-input-id.html
-last_built: 2024-07-17T13:21Z
+articles: {}
+last_built: 2024-07-25T12:18Z
 urls:
-  reference: https://appsilon.github.io/shiny.telemetry/reference
-  article: https://appsilon.github.io/shiny.telemetry/articles
+  reference: https://averissimo.github.io/shiny.telemetry/reference
+  article: https://averissimo.github.io/shiny.telemetry/articles

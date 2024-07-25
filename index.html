@@ -40,7 +40,18 @@
 
     <a class="navbar-brand me-2" href="index.html">shiny.telemetry</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <div id="version-switcher" class="dropdown">
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+        <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+0.2.0
+        </small>
+      </a>
+      <ul class="dropdown-menu">
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/dev">0.2.0.9014 (dev)</a></li>
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/">0.2.0</a></li>
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/v0.1.0">0.1.0</a></li>
+      </ul>
+</div>
 
     <a href="https://rhinoverse.dev" class="external-link home"><i class="fa fa-lg fa-chevron-left"></i></a>
 
@@ -50,15 +61,6 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-how-to-guides" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span class="fa fa-book-reader"></span> How-to Guides</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-how-to-guides">
-<li><a class="dropdown-item" href="articles/rhino.html">Setup shiny.telemetry in a Rhino application</a></li>
-    <li><a class="dropdown-item" href="articles/tracking-specific-input-id.html">Track a Subset of Inputs to Improve Performance</a></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Data Storage backends</h6></li>
-    <li><a class="dropdown-item" href="articles/databases.html">Use External Databases with shiny.telemetry</a></li>
-  </ul>
-</li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
 <li class="nav-item"><a class="nav-link" href="news/index.html"><span class="fa fa-newspaper-o"></span> Changelog</a></li>
       </ul>
@@ -77,13 +79,13 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="shinytelemetry-">shiny.telemetry <a href="https://appsilon.github.io/shiny.telemetry/"><img src="reference/figures/shiny-telemetry.png" alt="shiny.telemetry logo" style="float: right; height: 140px;"></a>
+<div class="page-header"><h1 id="shinytelemetry-">shiny.telemetry <a href="https://appsilon.github.io/shiny.telemetry/" class="external-link"><img src="reference/figures/shiny-telemetry.png" alt="shiny.telemetry logo" style="float: right; height: 140px;"></a>
 <a class="anchor" aria-label="anchor" href="#shinytelemetry-"></a>
 </h1></div>
 <blockquote>
 <p>Easy logging of users activity and session events of your Shiny App</p>
 </blockquote>
-<p><a href="https://cran.r-project.org/package=shiny.telemetry" class="external-link"><img src="https://www.r-pkg.org/badges/version/shiny.telemetry" alt="CRAN"></a> <a href="https://github.com/Appsilon/shiny.telemetry/actions/workflows/main.yml" class="external-link"><img src="https://github.com/Appsilon/shiny.telemetry/actions/workflows/main.yml/badge.svg" alt="R CMD check"></a> <a href="https://CRAN.R-project.org/package=shiny.telemetry" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/shiny.telemetry" alt="downloads monthly"></a> <a href="https://CRAN.R-project.org/package=shiny.telemetry" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/shiny.telemetry" alt="downloads total"></a> <a href="https://opensource.org/license/lgpl-3-0" class="external-link"><img src="https://img.shields.io/badge/License-LGPL--3.0-blue.svg" alt="License: LGPL-3.0"></a></p>
+<p><a href="https://cran.r-project.org/package=shiny.telemetry" class="external-link"><img src="https://www.r-pkg.org/badges/version/shiny.telemetry" alt="CRAN"></a> <a href="https://github.com/Appsilon/shiny.telemetry/actions/workflows/main.yml" class="external-link"><img src="https://github.com/Appsilon/shiny.telemetry/actions/workflows/main.yml/badge.svg" alt="R CMD check"></a> <a href="https://CRAN.R-project.org/package=shiny.telemetry" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/shiny.telemetry" alt="downloads monthly"></a> <a href="https://CRAN.R-project.org/package=shiny.telemetry" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/shiny.telemetry" alt="downloads total"></a> <a href="https://opensource.org/license/lgpl-3-0/" class="external-link"><img src="https://img.shields.io/badge/License-LGPL--3.0-blue.svg" alt="License: LGPL-3.0"></a></p>
 <p>The <code>shiny.telemetry</code> R package tracks events occurring on a user session, such as input changes and session duration, and stores them in a local or remote database.</p>
 <p>It provides developers with the tools to help understand how users interact with Shiny dashboards and answer questions such as: which tabs/pages are more often visited, which inputs users are changing, what is the average length of a session, etc.</p>
 <div class="section level2">
@@ -91,7 +93,7 @@
 </h2>
 <p>The <code>shiny.telemetry</code> package can be installed from GitHub by using the remotes package:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Appsilon/shiny.telemetry"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Appsilon/shiny.telemetry"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>With <code>dependencies = TRUE</code> the suggested packages (required to run some examples) will be installed in addition to mandatory dependencies.</p>
 </div>
 <div class="section level2">
@@ -108,13 +110,13 @@
 <p><em>Note</em>: When using the dashboard nothing is happening from the user’s perspective as all operation run in the background <em>(either in the server or in Javascript)</em>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shiny.posit.co/" class="external-link">shiny</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://appsilon.github.io/shiny.telemetry/">shiny.telemetry</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://appsilon.github.io/shiny.telemetry/" class="external-link">shiny.telemetry</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">telemetry</span> <span class="op">&lt;-</span> <span class="va"><a href="reference/Telemetry.html">Telemetry</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span> <span class="co"># 1. Initialize telemetry with default options</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html" class="external-link">shinyApp</a></span><span class="op">(</span></span>
 <span>  ui <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidPage</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="reference/use_telemetry.html">use_telemetry</a></span><span class="op">(</span><span class="op">)</span>, <span class="co"># 2. Add necessary javascript to Shiny</span></span>
+<span>    <span class="fu"><a href="reference/use_telemetry.html">use_telemetry</a></span><span class="op">(</span><span class="op">)</span>, <span class="co"># 2. Add necessary Javascript to Shiny</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html" class="external-link">numericInput</a></span><span class="op">(</span><span class="st">"n"</span>, <span class="st">"n"</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html" class="external-link">plotOutput</a></span><span class="op">(</span><span class="st">'plot'</span><span class="op">)</span></span>
 <span>  <span class="op">)</span>,</span>
@@ -150,7 +152,7 @@
 <li>Local file:
 <ul>
 <li>SQLite using <code>DataStorageSQLite</code> class</li>
-<li>Plain text file using <code>DataStorageLogFile</code> class</li>
+<li>Logfile using <code>DataStorageLogFile</code> class</li>
 </ul>
 </li>
 <li>Remote SQL database:
@@ -179,16 +181,16 @@
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
 </h2>
-<p>See <a href="https://appsilon.github.io/shiny.telemetry/CONTRIBUTING.html">CONTRIBUTING</a>.</p>
+<p>See <a href="https://appsilon.github.io/shiny.telemetry/CONTRIBUTING.html" class="external-link">CONTRIBUTING</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="appsilon">Appsilon<a class="anchor" aria-label="anchor" href="#appsilon"></a>
 </h2>
 <p><img src="https://avatars0.githubusercontent.com/u/6096772" align="right" alt="" width="6%"></p>
-<p>Appsilon is a <strong>Posit (formerly RStudio) Full Service Certified Partner</strong>.<br> Learn more at <a href="https://www.appsilon.com" class="external-link">appsilon.com</a>.</p>
+<p>Appsilon is a <strong>Posit (formerly RStudio) Full Service Certified Partner</strong>.<br> Learn more at <a href="https://appsilon.com" class="external-link">appsilon.com</a>.</p>
 <p>Get in touch <a href="mailto:opensource@appsilon.com">opensource@appsilon.com</a></p>
 <p>Explore the <a href="https://rhinoverse.dev" class="external-link">Rhinoverse</a> - a family of R packages built around <a href="https://appsilon.github.io/rhino/" class="external-link">Rhino</a>!</p>
-<p><a href="https://www.appsilon.com/careers" target="_blank" class="external-link"><img src="https://raw.githubusercontent.com/Appsilon/website-cdn/gh-pages/WeAreHiring1.png" alt="We are hiring!"></a></p>
+<p><a href="https://appsilon.com/careers/" target="_blank" class="external-link"><img src="https://raw.githubusercontent.com/Appsilon/website-cdn/gh-pages/WeAreHiring1.png" alt="We are hiring!"></a></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="github">
@@ -235,8 +237,6 @@
 <li>Kamil Żyła <br><small class="roles"> Author </small>  </li>
 <li>Krystian Igras <br><small class="roles"> Author </small>  </li>
 <li>Recle Vibal <br><small class="roles"> Author </small>  </li>
-<li>Arun Kodati <br><small class="roles"> Author </small>  </li>
-<li>Wahaduzzaman Khan <br><small class="roles"> Author </small>  </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
@@ -248,7 +248,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed with <span class="emoji" data-emoji="heart">❤️</span> by <a href="https://www.appsilon.com" class="external-link">Appsilon</a>.</p>
+  <p>Developed with <span class="emoji" data-emoji="heart">❤️</span> by <a href="https://appsilon.com" class="external-link">Appsilon</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">

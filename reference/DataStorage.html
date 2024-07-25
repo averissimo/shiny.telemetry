@@ -21,7 +21,16 @@ functions and uses a unified API."><!-- Google tag (gtag.js) --><script async sr
 
     <a class="navbar-brand me-2" href="../index.html">shiny.telemetry</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <div id="version-switcher" class="dropdown">
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+        <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+0.2.0
+        </small>
+      </a>
+      <ul class="dropdown-menu"><li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/dev">0.2.0.9014 (dev)</a></li>
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/">0.2.0</a></li>
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/v0.1.0">0.1.0</a></li>
+      </ul></div>
 
     <a href="https://rhinoverse.dev" class="external-link home"><i class="fa fa-lg fa-chevron-left"></i></a>
 
@@ -30,14 +39,7 @@ functions and uses a unified API."><!-- Google tag (gtag.js) --><script async sr
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-how-to-guides" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span class="fa fa-book-reader"></span> How-to Guides</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-how-to-guides"><li><a class="dropdown-item" href="../articles/rhino.html">Setup shiny.telemetry in a Rhino application</a></li>
-    <li><a class="dropdown-item" href="../articles/tracking-specific-input-id.html">Track a Subset of Inputs to Improve Performance</a></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Data Storage backends</h6></li>
-    <li><a class="dropdown-item" href="../articles/databases.html">Use External Databases with shiny.telemetry</a></li>
-  </ul></li>
-<li class="active nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
+      <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper-o"></span> Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
@@ -122,8 +124,8 @@ event was logged</p></dd>
 <dt><code>time</code></dt>
 <dd><p>date time value indicates the moment the record was
 generated in UTC. By default it should be NULL and determined
-automatically, but in cases where it should be defined, use <code><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time()</a></code>
-or <code>lubridate::now(tzone = "UTC")</code> to generate it.</p></dd>
+automatically, but in cases where it should be defined, use `Sys.time()`
+or `lubridate::now(tzone = "UTC")` to generate it.</p></dd>
 
 
 </dl><p></p></div>
@@ -192,7 +194,7 @@ data</p></dd>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed with <span class="emoji" data-emoji="heart">❤️</span> by <a href="https://www.appsilon.com" class="external-link">Appsilon</a>.</p>
+  <p>Developed with <span class="emoji" data-emoji="heart">❤️</span> by <a href="https://appsilon.com" class="external-link">Appsilon</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">

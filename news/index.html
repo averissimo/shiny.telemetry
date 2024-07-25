@@ -17,7 +17,16 @@
 
     <a class="navbar-brand me-2" href="../index.html">shiny.telemetry</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <div id="version-switcher" class="dropdown">
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+        <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+0.2.0
+        </small>
+      </a>
+      <ul class="dropdown-menu"><li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/dev">0.2.0.9014 (dev)</a></li>
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/">0.2.0</a></li>
+<li><a class="dropdown-item" href="https://averissimo.github.io/shiny.telemetry/v0.1.0">0.1.0</a></li>
+      </ul></div>
 
     <a href="https://rhinoverse.dev" class="external-link home"><i class="fa fa-lg fa-chevron-left"></i></a>
 
@@ -26,14 +35,7 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-how-to-guides" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span class="fa fa-book-reader"></span> How-to Guides</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-how-to-guides"><li><a class="dropdown-item" href="../articles/rhino.html">Setup shiny.telemetry in a Rhino application</a></li>
-    <li><a class="dropdown-item" href="../articles/tracking-specific-input-id.html">Track a Subset of Inputs to Improve Performance</a></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Data Storage backends</h6></li>
-    <li><a class="dropdown-item" href="../articles/databases.html">Use External Databases with shiny.telemetry</a></li>
-  </ul></li>
-<li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper-o"></span> Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
@@ -52,30 +54,6 @@
       <small>Source: <a href="https://github.com/Appsilon/shiny.telemetry/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="section level2">
-<h2 class="pkg-version" data-toc-text="0.3.0" id="shinytelemetry-030">shiny.telemetry 0.3.0<a class="anchor" aria-label="anchor" href="#shinytelemetry-030"></a></h2>
-<div class="section level4">
-<h4 id="new-features-0-3-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-0-3-0"></a></h4>
-<ul><li>Added shiny error tracking (activated by default with <code>start_session</code>) (<a href="https://github.com/Appsilon/shiny.telemetry/issues/116" class="external-link">#116</a>).</li>
-<li>Updated <code>get_user</code> method to retrieve user in <code>shinyproxy</code> environment (<a href="https://github.com/Appsilon/shiny.telemetry/issues/124" class="external-link">#124</a>).</li>
-<li>Added flexibility to select between [<code>RPostgreSQL</code>, <code>RPostgres</code>] drivers (<a href="https://github.com/Appsilon/shiny.telemetry/issues/147" class="external-link">#147</a>).</li>
-<li>Improved input tracking by implementing inclusion and exclusion logic (<a href="https://github.com/Appsilon/shiny.telemetry/issues/30" class="external-link">#30</a>).</li>
-<li>Added tracking for returning anonymous users (<a href="https://github.com/Appsilon/shiny.telemetry/issues/142" class="external-link">#142</a>).</li>
-<li>Added support for MongoDB (see <code>DataStorageMongoDB</code> class) (<a href="https://github.com/Appsilon/shiny.telemetry/issues/174" class="external-link">#174</a>).</li>
-</ul></div>
-<div class="section level4">
-<h4 id="miscellaneous-0-3-0">Miscellaneous<a class="anchor" aria-label="anchor" href="#miscellaneous-0-3-0"></a></h4>
-<ul><li>Updates documentation to use markdown format (<a href="https://github.com/Appsilon/shiny.telemetry/issues/153" class="external-link">#153</a>).</li>
-<li>Improves SQL injection safeguards via <code><a href="https://glue.tidyverse.org/reference/glue_sql.html" class="external-link">glue::glue_sql</a></code> to generated SQL queries (<a href="https://github.com/Appsilon/shiny.telemetry/issues/34" class="external-link">#34</a>).</li>
-<li>Show proper error message when no telemetry data is available (<a href="https://github.com/Appsilon/shiny.telemetry/issues/177" class="external-link">#177</a>).</li>
-<li>Adds how-to guides to site (<a href="https://github.com/Appsilon/shiny.telemetry/issues/179" class="external-link">#179</a> and <a href="https://github.com/Appsilon/shiny.telemetry/issues/180" class="external-link">#180</a>)</li>
-</ul></div>
-<div class="section level4">
-<h4 id="bug-fixes-0-3-0">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-3-0"></a></h4>
-<ul><li>Fixed Analytics app not being able to access data by Instrumentation app (<a href="https://github.com/Appsilon/shiny.telemetry/issues/164" class="external-link">#164</a>).</li>
-<li>Fixed SQLite data storage backend when reading date column (<a href="https://github.com/Appsilon/shiny.telemetry/issues/182" class="external-link">#182</a>).</li>
-</ul></div>
-</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="shinytelemetry-020">shiny.telemetry 0.2.0<a class="anchor" aria-label="anchor" href="#shinytelemetry-020"></a></h2><p class="text-muted">CRAN release: 2023-11-16</p>
 <div class="section level4">
@@ -104,7 +82,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed with <span class="emoji" data-emoji="heart">❤️</span> by <a href="https://www.appsilon.com" class="external-link">Appsilon</a>.</p>
+  <p>Developed with <span class="emoji" data-emoji="heart">❤️</span> by <a href="https://appsilon.com" class="external-link">Appsilon</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
