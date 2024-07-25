@@ -55,14 +55,14 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.12",
+      "Version": "1.0.13",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "methods",
         "utils"
       ],
-      "Hash": "5ea2700d21e038ace58269ecdbeb9ec0"
+      "Hash": "f27411eb6d9c3dada5edd444b8416675"
     },
     "askpass": {
       "Package": "askpass",
@@ -792,14 +792,14 @@
     },
     "shiny.telemetry": {
       "Package": "shiny.telemetry",
-      "Version": "0.3.0",
+      "Version": "0.2.0.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "appsilon",
       "RemoteRepo": "shiny.telemetry",
-      "RemoteRef": "f15f9171a08cef36c9979ba66119e6074ed343ca",
-      "RemoteSha": "f15f9171a08cef36c9979ba66119e6074ed343ca",
+      "RemoteRef": "756ed87dd17fac6f4bd9cf5653c392f6eb59d6ff",
+      "RemoteSha": "756ed87dd17fac6f4bd9cf5653c392f6eb59d6ff",
       "Requirements": [
         "R6",
         "RSQLite",
@@ -810,7 +810,6 @@
         "htmltools",
         "httr2",
         "jsonlite",
-        "lifecycle",
         "logger",
         "lubridate",
         "odbc",
@@ -820,7 +819,7 @@
         "stringr",
         "tidyr"
       ],
-      "Hash": "00e12a8df276833a9d23d18d2774d0b3"
+      "Hash": "a43e8bab5c00cd7dd13c8b49c22598c6"
     },
     "sourcetools": {
       "Package": "sourcetools",
@@ -940,13 +939,13 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.51",
+      "Version": "0.52",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "xfun"
       ],
-      "Hash": "d44e2fcd2e4e076f0aac540208559d1d"
+      "Hash": "cfbad971a71f0e27cec22e544a08bc3b"
     },
     "utf8": {
       "Package": "utf8",
@@ -986,7 +985,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.45",
+      "Version": "0.46",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -994,7 +993,7 @@
         "stats",
         "tools"
       ],
-      "Hash": "ca59c87fe305b16a9141a5874c3a7889"
+      "Hash": "00ce32f398db0415dde61abfef11300c"
     },
     "xtable": {
       "Package": "xtable",
